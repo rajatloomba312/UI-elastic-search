@@ -1,0 +1,186 @@
+<!-- The content below is only a placeholder and can be replaced. -->
+
+<!-- Header Component- search invoice. -->
+
+<div class="main-div ml-4 mt-3">
+  <blockquote class="blockquote bq-success">
+    <p class="bq-title">
+      Search
+      <span class="teal-text"
+        >Invoice <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+      </span>
+    </p>
+  </blockquote>
+</div>
+<!-- Header Component end. -->
+<!-- Download -->
+<div class="downloadDiv mb-4">
+  <mdb-card>
+    <mdb-card-header><h5><b>Selected Item List..</b></h5></mdb-card-header>
+    <mdb-card-body>
+      <mdb-card-title>
+        <h6>Content values</h6>
+      </mdb-card-title>
+      <mdb-card-text>Whole list is displayed here</mdb-card-text>
+      <a href="" mdbBtn color="danger">Clear List</a>
+      <a href="" mdbBtn color="cyan" mdbWavesEffect>Download ALl Selected</a>
+    </mdb-card-body>
+  </mdb-card>
+</div>
+  <!-- Download ends. -->
+
+<!-- addition of cards. -->
+<div class="cardDiv ml-4">
+  <h4><b>Search Results:</b></h4>
+  <br />
+  <div class="row">
+    <div class="col-md-4">
+      <!-- Card -->
+      <mdb-card cascade="true">
+        <mdb-card-body cascade="true" class="text-center">
+          <!-- Card content -->
+          <h5 class="pink-text">
+            Process Instance Id <br />
+            #3459058
+          </h5>
+          <hr />
+          <mdb-card-text>
+            <h6 class="card-title">Fil Entity Number :331</h6>
+            <h6 class="card-title">JDE Doc Number :1000</h6>
+            <h6 class="card-title">Supplier Name : Dummy 59</h6>
+          </mdb-card-text>
+          <mdb-checkbox [default]="true">Add to Download List</mdb-checkbox>
+          <button mdbBtn type="button" color="mdb-color" mdbWavesEffect>
+            Download
+          </button>
+        </mdb-card-body>
+        <!-- /.Card content -->
+      </mdb-card>
+      <!-- /.Card -->
+    </div>
+
+    <div class="col-md-4">
+      <!-- Card -->
+      <mdb-card cascade="true">
+        <mdb-card-body cascade="true" class="text-center">
+          <!-- Card content -->
+          <h5 class="pink-text">
+            Process Instance Id <br />
+            #2454059
+          </h5>
+          <hr />
+          <mdb-card-text>
+            <h6 class="card-title">Fil Entity Number :741</h6>
+            <h6 class="card-title">JDE Doc Number :800</h6>
+            <h6 class="card-title">Supplier Name : Dummy 60</h6>
+          </mdb-card-text>
+          <mdb-checkbox [default]="true">Add to Download List</mdb-checkbox>
+          <button mdbBtn type="button" color="mdb-color" mdbWavesEffect>
+            Download
+          </button>
+        </mdb-card-body>
+        <!-- /.Card content -->
+      </mdb-card>
+      <!-- /.Card -->
+    </div>
+
+    <div class="col-md-4">
+      <!-- Card -->
+      <mdb-card cascade="true">
+        <mdb-card-body cascade="true" class="text-center">
+          <!-- Card content -->
+          <h5 class="pink-text">
+            Process Instance Id <br />
+            #989767
+          </h5>
+          <hr />
+          <mdb-card-text>
+            <h6 class="card-title">Fil Entity Number :441</h6>
+            <h6 class="card-title">JDE Doc Number :188</h6>
+            <h6 class="card-title">Supplier Name : Dummy 58</h6>
+          </mdb-card-text>
+          <mdb-checkbox [default]="true">Add to Download List</mdb-checkbox>
+          <button mdbBtn type="button" color="mdb-color" mdbWavesEffect>
+            Download
+          </button>
+        </mdb-card-body>
+        <!-- /.Card content -->
+      </mdb-card>
+      <!-- /.Card -->
+    </div>
+  </div>
+  <!-- pagination. -->
+  <div class="mt-4 rightFloat">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination pg-blue">
+        <li class="page-item">
+          <a class="page-link" tabindex="-1" mdbWavesEffect>Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" mdbWavesEffect>1</a></li>
+        <li class="page-item active">
+          <a class="page-link" mdbWavesEffect
+            >2 <span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="page-item"><a class="page-link" mdbWavesEffect>3</a></li>
+        <li class="page-item">
+          <a class="page-link" tabindex="+1" mdbWavesEffect>Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- pagination ends. -->
+</div>
+<br /><br />
+
+<!-- Add Search Filters. -->
+<div
+  class="modal-dialog modal-notify modal-info leftFloat ml-4"
+  role="document"
+>
+  <div class="modal-content">
+    <!-- Header -->
+    <div class="modal-header">
+      <p class="heading lead">Add Search Filters</p>
+    </div>
+
+    <!-- Body -->
+    <div class="modal-body">
+      <!-- Input form Component. -->
+      <div class="main-div hiddenOverflow leftPanel">
+        <div class="pretty p-switch p-fill p-jelly leftFloat mt-3">
+          <input type="checkbox" id="processInstanceId" />
+          <div class="state"><label>Process Instance Id</label></div>
+        </div>
+
+        <div class="rightFloat align-top mt-0 md-form">
+          <input
+            type="text"
+            class="form-control"
+            #processInstanceText
+            mdbInputDirective
+          />
+        </div>
+      </div>
+
+      <div class="main-div hiddenOverflow leftPanel">
+        <div class="pretty p-switch p-fill p-jelly leftFloat mt-3">
+          <input type="checkbox" id="supplierName" />
+          <div class="state"><label>Supplier Name</label></div>
+        </div>
+
+        <div class="rightFloat align-top mt-0 md-form">
+          <input
+            type="text"
+            #supplierNameText
+            class="form-control"
+            mdbInputDirective
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Add Search Filters ends. -->
+
+<router-outlet></router-outlet>
